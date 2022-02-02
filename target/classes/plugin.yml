@@ -1,0 +1,18 @@
+name: GappleCooldown
+main: com.pdev.gapplecooldown.GappleCooldown
+description: Add cooldowns for players using god apples in-game!
+version: 1.0.0
+author: pdev
+api-version: 1.13
+
+commands:
+  gapplecooldown:
+    aliases:
+    - gc
+    usage: /<command>
+    permission: gapplecooldown.admin
+
+permissions:
+  gapplecoldown.bypass:
+    description: Allows user to bypass the gapple cooldown
+    default: op
