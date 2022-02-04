@@ -7,6 +7,7 @@ import com.pdev.gapplecooldown.api.GCCommand;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class GappleCooldownCommand extends GCCommand {
 
@@ -41,7 +42,7 @@ public class GappleCooldownCommand extends GCCommand {
             GappleCooldown plugin = GappleCooldown.getInstance();
 
             plugin.reloadPlugin();
-            sender.sendMessage(plugin.getConfiguration().getReloadMessage());
+            sender.sendMessage(plugin.getConfiguration().getReloadMessage(sender instanceof Player ? (Player) sender : null));
         } else {
             throw new Exception("usage");
         }

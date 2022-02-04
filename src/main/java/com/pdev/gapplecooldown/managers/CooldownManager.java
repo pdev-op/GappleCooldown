@@ -27,10 +27,24 @@ public class CooldownManager {
 
             if (cooldown.getCooldown() - System.currentTimeMillis() > 0) {
                 return cooldown;
+            } else {
+                cooldowns.remove(player.getUniqueId());
             }
         }
 
         return null;
+    }
+
+    public int getTotalCooldowns() {
+        int count = 0;
+
+        for (Cooldown cooldown : cooldowns.values()) {
+            if (cooldown.getCooldown() - System.currentTimeMillis() > 0) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public void addCooldown(Player player) {
