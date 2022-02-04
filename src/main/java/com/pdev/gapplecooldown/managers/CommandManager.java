@@ -88,7 +88,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
                 // Check Permissions
                 if (!c.hasPermission(sender) && !sender.hasPermission("gapplecooldown.*")) {
-                    sender.sendMessage(config.getInsufficientPerms());
+                    sender.sendMessage(config.getInsufficientPerms(null));
 
                     return false;
                 }
@@ -98,9 +98,9 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                     c.execute(sender, args);
                 } catch (Exception e) {
                     if (e.getMessage().equalsIgnoreCase("insufficient-permissions")) {
-                        sender.sendMessage(config.getInsufficientPerms());
+                        sender.sendMessage(config.getInsufficientPerms(null));
                     } else if (e.getMessage().equalsIgnoreCase("usage")) {
-                        sender.sendMessage(config.getUsageMessage().replace("%usage%", c.getSyntax()));
+                        sender.sendMessage(config.getUsageMessage(null).replace("%usage%", c.getSyntax()));
                     } else {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cAn internal error has occured, please contact an admin. We are sorry for the inconvenience!"));
 
