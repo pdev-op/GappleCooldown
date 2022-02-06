@@ -29,7 +29,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         commands = new ArrayList<GCCommand>();
 
         // Main Command
-        commands.add(new GappleCooldownCommand());
+        commands.add(new GappleCooldownCommand(plugin));
 
         // Register the commands
         registerCommands();
@@ -101,6 +101,8 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                         sender.sendMessage(config.getInsufficientPerms(null));
                     } else if (e.getMessage().equalsIgnoreCase("usage")) {
                         sender.sendMessage(config.getUsageMessage(null).replace("%usage%", c.getSyntax()));
+                    } else if (e.getMessage().equalsIgnoreCase("no-player")) {
+                        sender.sendMessage(config.getPlayerNotFoundMessage());
                     } else {
                         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cAn internal error has occured, please contact an admin. We are sorry for the inconvenience!"));
 

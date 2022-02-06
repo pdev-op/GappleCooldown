@@ -1,7 +1,7 @@
 name: GappleCooldown
 main: com.pdev.gapplecooldown.GappleCooldown
 description: Add cooldowns for players using god apples in-game!
-version: 1.0.1
+version: 1.1.0
 author: pdev
 softdepend: [PlaceholderAPI]
 api-version: 1.13

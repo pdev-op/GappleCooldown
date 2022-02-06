@@ -21,12 +21,12 @@ public class PapiHook extends Hook {
             try {
                 new Placeholders(plugin).register();
             } catch (Exception e) {
-                Bukkit.getConsoleSender().sendMessage("      §ePlaceholderAPI §7hook §cerror:!");
+                Bukkit.getConsoleSender().sendMessage("        §ePlaceholderAPI §7hook §cerror:!");
                 Bukkit.getConsoleSender().sendMessage(e.getMessage());
                 return false;
             }
 
-            Bukkit.getConsoleSender().sendMessage("      §ePlaceholderAPI §7hook §aEnabled!");
+            Bukkit.getConsoleSender().sendMessage("        §ePlaceholderAPI §7hook §aEnabled!");
             return true;
         }
 

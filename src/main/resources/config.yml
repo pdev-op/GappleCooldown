@@ -4,7 +4,7 @@
 #    \___\__,_| .__/ .__/_\___|\___\___/\___/_\__,_\___/\_/\_/|_||_|
 #             |_|  |_|                                              
 #
-#                   Gapple Cooldown by pdev (v1.0.1)
+#                   Gapple Cooldown by pdev (v1.1.0)
 
 
 # COOLDOWN
@@ -19,6 +19,10 @@ insufficient-perms: "&cInsufficient permissions."
 cooldown-message: "%prefix% You must wait &c%cooldown% &7before using a gapple again!"
 wrong-usage: "%prefix% Incorrect usage (try &e%usage%&7)."
 reload-message: "%prefix% plugin reloaded."
+no-player: "&cPlayer not found, please try again."
+cooldown-other-active: "%prefix% &e%player% &7has &a%cooldown% &7left on their cooldown."
+cooldown-other-inactive: "%prefix% &e%player% &7currently is not on cooldown."
+total-cooldowns: "%prefix% There are &e%total% &7players on cooldown right now."
 
 # DANGER ZONE - DO NOT TOUCH
-config-version: 1
+config-version: 2

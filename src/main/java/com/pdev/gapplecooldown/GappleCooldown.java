@@ -31,7 +31,7 @@ public class GappleCooldown extends JavaPlugin {
 
         // Fancy messages :)
         Bukkit.getConsoleSender().sendMessage(" ");
-        Bukkit.getConsoleSender().sendMessage("          §eGappleCooldown §7by §dpdev");
+        Bukkit.getConsoleSender().sendMessage("        §eGappleCooldown §6v" + getDescription().getVersion() + " §7by §dpdev");
         Bukkit.getConsoleSender().sendMessage("                 §aEnabling");
         Bukkit.getConsoleSender().sendMessage(" ");
 
