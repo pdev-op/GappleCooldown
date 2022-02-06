@@ -5,10 +5,10 @@
 
   <groupId>com.pdev</groupId>
   <artifactId>gapplecooldown</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
 
   <name>GappleCooldown</name>
-  <url>http://www.example.com</url>
+  <url>https://coconutmc.com</url>
 
   <packaging>jar</packaging>
 

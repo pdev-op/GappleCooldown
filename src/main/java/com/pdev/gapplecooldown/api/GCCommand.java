@@ -3,14 +3,19 @@ package com.pdev.gapplecooldown.api;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.pdev.gapplecooldown.GappleCooldown;
+
 import org.bukkit.command.CommandSender;
 
 public abstract class GCCommand {
+    protected GappleCooldown plugin;
     private ArrayList<String> aliases = new ArrayList<String>();
     private String syntax;
     private String description;
 
-    public GCCommand() {}
+    public GCCommand(GappleCooldown plugin) {
+        this.plugin = plugin;
+    }
 
     public ArrayList<String> getAliases() { return this.aliases; }
 
