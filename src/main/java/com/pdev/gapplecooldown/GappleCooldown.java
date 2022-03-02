@@ -29,11 +29,8 @@ public class GappleCooldown extends JavaPlugin {
         // Timings
         long start = System.currentTimeMillis();
 
-        // Fancy messages :)
-        Bukkit.getConsoleSender().sendMessage(" ");
-        Bukkit.getConsoleSender().sendMessage("        §eGappleCooldown §6v" + getDescription().getVersion() + " §7by §dpdev");
-        Bukkit.getConsoleSender().sendMessage("                 §aEnabling");
-        Bukkit.getConsoleSender().sendMessage(" ");
+        // Logging
+        Bukkit.getConsoleSender().sendMessage("§eGappleCooldown §6v" + getDescription().getVersion() + " §7by §dpdev §7enabling...");
 
         // Metrics
         new bStats(this, 14156);
@@ -58,19 +55,17 @@ public class GappleCooldown extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new GappleListener(), this);
 
         // Fancy again
-        Bukkit.getConsoleSender().sendMessage("               §aEnabled in §e" + (System.currentTimeMillis() - start) + "ms");
+        Bukkit.getConsoleSender().sendMessage("§aEnabled in §e" + (System.currentTimeMillis() - start) + "ms");
     }
 
     @Override
     public void onDisable() {
-        // Fancy messages :)
-        Bukkit.getConsoleSender().sendMessage(" ");
-        Bukkit.getConsoleSender().sendMessage("          §eGapple§6Cooldown §7by §dpdev");
-        Bukkit.getConsoleSender().sendMessage("                  §cDisabling");
-        Bukkit.getConsoleSender().sendMessage(" ");
-
         // Config
         config.save();
+        // Fancy messages
+
+        Bukkit.getConsoleSender().sendMessage(" ");
+        Bukkit.getConsoleSender().sendMessage("§eGapple§6Cooldown §7by §dpdev disabled");
     }
 
     public static GappleCooldown getInstance() {

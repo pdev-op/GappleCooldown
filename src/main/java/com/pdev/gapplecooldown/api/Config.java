@@ -4,8 +4,8 @@ import java.io.File;
 
 import com.pdev.gapplecooldown.GappleCooldown;
 import com.pdev.gapplecooldown.hooks.PapiHook;
+import com.pdev.gapplecooldown.utils.StringUtils;
 
-import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
@@ -100,6 +100,6 @@ public class Config {
             message = papiHook.loadPlaceholders(player, message);
         }
 
-        return ChatColor.translateAlternateColorCodes('&', message);
+        return StringUtils.colorize(message);
     }
 }

@@ -10,8 +10,7 @@ import org.bukkit.command.CommandSender;
 public abstract class GCCommand {
     protected GappleCooldown plugin;
     private ArrayList<String> aliases = new ArrayList<String>();
-    private String syntax;
-    private String description;
+    private String usage;
 
     public GCCommand(GappleCooldown plugin) {
         this.plugin = plugin;
@@ -29,24 +28,14 @@ public abstract class GCCommand {
         this.aliases.add(a);
     }
 
-    public String getSyntax()
+    public String getUsage()
     {
-        return this.syntax;
+        return this.usage;
     }
 
-    public void setSyntax(String s)
+    public void setUsage(String s)
     {
-        this.syntax = s;
-    }
-
-    public String getDescription()
-    {
-        return this.description;
-    }
-
-    public void setDescription(String d)
-    {
-        this.description = d;
+        this.usage = s;
     }
 
     public abstract HashMap<String, Integer> getSuggestions(CommandSender sender);
