@@ -30,7 +30,8 @@ public class GappleCooldown extends JavaPlugin {
         long start = System.currentTimeMillis();
 
         // Logging
-        Bukkit.getConsoleSender().sendMessage("§eGappleCooldown §6v" + getDescription().getVersion() + " §7by §dpdev §7enabling...");
+        Bukkit.getConsoleSender()
+                .sendMessage("§eGappleCooldown §6v" + getDescription().getVersion() + " §7by §dpdev §7enabling...");
 
         // Metrics
         new bStats(this, 14156);

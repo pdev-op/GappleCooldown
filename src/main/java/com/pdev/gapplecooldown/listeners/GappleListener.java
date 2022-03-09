@@ -27,7 +27,8 @@ public class GappleListener implements Listener {
                 e.setUseItemInHand(Event.Result.DEFAULT);
                 e.setCancelled(true);
 
-                String message = GappleCooldown.getInstance().getConfiguration().getCooldownMessage(cooldown.getTimeFormatted(), player);
+                String message = GappleCooldown.getInstance().getConfiguration()
+                        .getCooldownMessage(cooldown.getTimeFormatted(), player);
 
                 player.sendMessage(message);
             } else {

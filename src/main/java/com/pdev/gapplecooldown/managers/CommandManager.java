@@ -108,7 +108,8 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                     } else if (e.getMessage().equalsIgnoreCase("no-player")) {
                         sender.sendMessage(config.getPlayerNotFoundMessage());
                     } else {
-                        sender.sendMessage(StringUtils.colorize("&cAn internal error has occured, please contact an admin. We are sorry for the inconvenience!"));
+                        sender.sendMessage(StringUtils.colorize(
+                                "&cAn internal error has occured, please contact an admin. We are sorry for the inconvenience!"));
 
                         e.printStackTrace();
                     }

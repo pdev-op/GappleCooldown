@@ -18,7 +18,7 @@ public class HooksManager {
         }
 
         return null;
-    }   
+    }
 
     public void addHook(Hook hook) {
         if (hook.load()) {

@@ -80,8 +80,10 @@ public class Config {
                     player);
         }
 
-        return addPlaceholders(version > 1 ? config.getString("cooldown-other-inactive").replaceAll("%player%", player.getName())
-                : "%prefix% &e" + player.getName() + " &7currently is not on cooldown.", player);
+        return addPlaceholders(
+                version > 1 ? config.getString("cooldown-other-inactive").replaceAll("%player%", player.getName())
+                        : "%prefix% &e" + player.getName() + " &7currently is not on cooldown.",
+                player);
     }
 
     public String getTotalCooldownsMessage(int total) {
